@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Category Selection */
+.categories {
+  list-style: none; /* Removes black dots */
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+}
+
+.category-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #68c56c;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.category-btn.completed {
+  background: #07800d;
+  cursor: not-allowed;
+}
+
+.category-btn:hover:not(.completed) {
+  transform: scale(1.02);
+  background: #2196F3;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease
+}
+
+.question-container {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.options li {
+  margin: 10px 0;
+}
+
+.switch-btn {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: #9fdfa3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.next-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #2196F3;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.next-btn:hover {
+  background: #0d47a1;
+}
+
+.result-popup {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f0f4f8;
+  border-radius: 5px;
+}
+
+/* Horizontal Results Layout */
+.results {
+  list-style: none;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.result-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 30px; /* Space between categories */
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.result-item {
+  background: #f0f4f8;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px; /* Fixed width for consistency */
+}
+
+.result-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.result-item p {
+  margin: 5px 0;
+  color: #666;
+}
